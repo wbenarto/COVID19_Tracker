@@ -35,7 +35,7 @@ const Cards = ({ data: {confirmed, recovered, deaths, lastUpdate} }) => {
                         <Typography variant='h5'>
                             <CountUp 
                             start={0}
-                            end={deaths.value}
+                            end={recovered.value}
                             separator=','
                             />
                         </Typography>
@@ -46,8 +46,13 @@ const Cards = ({ data: {confirmed, recovered, deaths, lastUpdate} }) => {
                 <Grid item component={Card} xs={12} md={3} className={cx(styles.card, styles.deaths)}>
                     <CardContent>
                         <Typography color='textSecondary' gutterBottom>Deaths</Typography>
-                        <Typography variant='h5'>Real Data</Typography>
-                        <Typography color='textSecondary'>Real Date</Typography>
+                        <Typography variant='h5'>
+                            <CountUp 
+                            start={0}
+                            end={deaths.value}
+                            separator=','
+                            />
+                        </Typography>                        <Typography color='textSecondary'>Real Date</Typography>
                         <Typography variant='body2'>Number of deaths by Covid19</Typography>
                     </CardContent>
                 </Grid>
