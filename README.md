@@ -4,7 +4,7 @@ Hello Friends. Welcome to my covid 19 tracker app. Utilizing covid.mathdro.id/ap
 ### Landing Page 
 Displays the daily infection, recovered and death numbers around the globe. 
 
-![](/images/home.png)
+![](/src/images/home.png)
 ![](/images/us.png)
 
 link: (https://wbenarto.github.io/COVID19_Tracker)
