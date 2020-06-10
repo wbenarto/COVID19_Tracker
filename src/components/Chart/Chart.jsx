@@ -21,7 +21,7 @@ const Chart = ( { data: { confirmed, deaths, recovered}, country }) => {
         ? (
         <Line 
         data={{
-            labels: dailyData.map(({ date }) => date ),
+            labels: dailyData.map(({ date }) => date.split('-').slice(1).join('/')),
             datasets: [{
                 data: dailyData.map(({ confirmed }) => confirmed),
                 label: 'Infected',
@@ -29,15 +29,13 @@ const Chart = ( { data: { confirmed, deaths, recovered}, country }) => {
                 fill: true,
             },{
                 data: dailyData.map(({ deaths }) => deaths),
-                label: 'Infected',
+                label: 'Deaths',
                 borderColor: 'red',
                 backgroundColor: 'rgba(255, 0, 0, 0.5',
                 fill: true,
-
             }]
         }} 
         /> ) : null
-
     );
 
     const barChart = (
@@ -65,7 +63,7 @@ const Chart = ( { data: { confirmed, deaths, recovered}, country }) => {
     )
 
     return (
-        <div className={styles.container}>
+        <div className={styles.chartbody}>
             {country ? barChart : lineChart}
         </div>
     )

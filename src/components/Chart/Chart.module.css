@@ -1,7 +1,13 @@
-.container {
+/* .container {
     display: flex;
     justify-content: center;
     width: 83%;
+} */
+
+.chartbody {
+    width: 50%;
+    display: flex;
+    justify-content: center;
 }
 
 @media (max-width: 770px) {
